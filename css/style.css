@@ -117,6 +117,27 @@ img{
     background-image: url(../assets/images/Mr.Calibration.png); 
 }
 
+.flex-item a#we{
+    background-image: url(../assets/images/week8.png); 
+}
+
+.flex-item a#wn{
+    background-image: url(../assets/images/week9.png); 
+}
+
+.flex-item a#ws{
+    background-image: url(../assets/images/week6.png); 
+}
+
+.flex-item a#fn{
+    background-image: url(../assets/images/final.png); 
+}
+
+.flex-item a#ww{
+    background-image: url(../assets/images/week7.png); 
+}
+
+
 .flex-basis-third .flex-item{
     flex-basis: 33.33%; 
 }

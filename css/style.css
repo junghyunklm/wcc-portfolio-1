@@ -137,6 +137,10 @@ img{
     background-image: url(../assets/images/week7.png); 
 }
 
+.flex-item a#fnn{
+    background-image: url(../assets/images/final1.png); 
+}
+
 
 .flex-basis-third .flex-item{
     flex-basis: 33.33%; 

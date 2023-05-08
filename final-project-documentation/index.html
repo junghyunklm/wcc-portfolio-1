@@ -19,9 +19,9 @@
         </nav>
         <header class="documentation-header">
             <section class="center-text">
-                <h1>Work Title</h1>
-                <h2>by Your Name</h6>
-                <p>Write a one-sentence summary of what the project is.</p> 
+                <h1>MMP-000</h1>
+                <h2>Junghyun Kim</h6>
+                <p>WMachine-learned game controller to play blockchain-based clicker Unity games</p> 
             </section>
         </header>
 
@@ -33,72 +33,114 @@
             </section>
             <section>
                 <h3>Introduction</h3>
-                <p>Write a short introduction, a short paragraph, giving a bit more detail about what the project is.</p>
+                <p>The purpose of this project is to create a pickaxe-shaped controller using Huzzah32
+                    ESP32, BNO055 components that can be used to play a blockchain game in Unity. The project also aims to explore the differences between traditional mining and cryptocurrency mining.
+                    </p>
             </section>
             <section>
                 <h3>Concept and Background Research</h3>
                 
-                <p>Write about the concept behind the project, in other words the creative or theoretical inspiration. Include details about any background research you may have done (don’t forget to include references in the reference section).</p>
-                <p>Consider writing about your work in relation to a creative, theoretical or computational tradition that you may be taking inspiration from, in other words think about how your work is situated in a particular making tradition. </p>
-                
+                <p>Traditionally, mining was a physically demanding job that involved extracting resources from the earth, such as coal or gold. This type of mining required a significant amount of manual labor, as well as specialized equipment.</p>
+                <p>Cryptocurrency mining, on the other hand, involves using computer power to solve complex mathematical problems in order to validate transactions on a blockchain network. This type of mining does not require physical labor, but rather relies on the computational power of machines. </p>
+                <p>The shift towards cryptocurrency mining has had significant implications for human life, as it has led to change the concept of traditional mining and being a new industry that has same name as the mining. The concept of mining is succeeded but physical mining isn’t.</p>
+                <p>Before starting the project, I researched how Unity games based on blockchain games are structured and looked for ways to machine-learn game controllers.</p>
                 <!-- if you have a full width image try make it not too tall -->
-                <img src="../assets/images/repeating-diagonal-lines-strip.jpeg"/>
+                <img src="../assets/images/thirdweb.png"/>
+                <div style="text-align: center"><p><a href = "https://thirdweb.com/solutions/gaming">Image From: Thirdweb </a></p></div>
+                
                 
             </section>
+
             <section>
                 <h3>Technical Implementation</h3>
 
                 <!-- example of styling for three images, you can write your own styling -->
                 <div class="flex-container flex-basis-third">
                     <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-square.jpeg"/>
+                        <img src="../assets/images/sketch.png"/>
                     </div>
                     <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-square.jpeg"/>
+                        <img src="../assets/images/arduino.png"/>
                     </div>
                     <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-square.jpeg"/>
+                        <img src="../assets/images/python.png"/>
                     </div>
                 </div>
                 
-                <p>Write about the process of implementing your project. What technical elements or hardware are involved in your system. Write about why you made certain technical or design decisions etc. </p>
-            
-                <!-- example of styling for three images, you can write your own styling -->
+                <p>First, I drew for controller’s design sketch which feels like sci-fi and retro vibe. I referred some game pickaxes from Fortnite and Gundam to has the vibes. And build it with Esp32, BNO055, SSD1306. </p>
+                <P>The first method chosen for machine learning using the games esp32 and bno055 was a Unity package called “interactML” developed by Goldsmith students. However, the developed package was a package that could not be used in WebGL, and a blockchain-based game had no choice but to build with WebGL to connect to a virtual currency wallet, so another method was chosen.</P>
+                <p>The method I chose was a platform called Edge Impulse. Edge Impulse is a platform that uses AI to train users' models, reduce the probability of failure, and help them deploy in various forms.</p>
+                <p>Arduino code was written to train the controller. This code uses BNO055 to extract Orientation, Gyro, and Acceleration values and transmit them to laptop through Bluetooth serial communication.</p>
+                <p>Now, open the manager, check if the name of the controller you created, the extracted value and the number match, and specify what number each number means. Connect the controller created through this process to Edge Impulse and use the AI Web Machine Learning Platform provided by Edge Impulse.   </p>
+                
+                <img src="../assets/images/ml1.png"/>
+                
                 <div class="flex-container flex-basis-half">
                     <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
+                        <img src="../assets/images/ml_lf.png"/>
                     </div>
                     <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
+                        <img src="../assets/images/ml_rt.png"/>
                     </div>
                 </div>
 
-                <!-- default flex item is for 4 & follows media query styling for home page -->
-                <div class="flex-container">
+                <p>The controller can be machine-learned as desired by the user, and I learned the controller for both the left and right hands by following the motions of the miners' pickaxe. After motion recording, the data is displayed as a graph. The left side is recorded with the left hand, and the right side is recorded with the right hand.</p>
+                
+                
+                <!-- example of styling for three images, you can write your own styling -->
+                <div class="flex-container flex-basis-half">
                     <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
+                        <img src="../assets/images/ml_result.png"/>
                     </div>
                     <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
-                    </div>
-                    <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
-                    </div>
-                    <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
+                        <img src="../assets/images/deploy.png"/>
                     </div>
                 </div>
+
+                <p>After this process, more possibilities are trained through AI machine learning, the margin of error is reduced, and complete machine learning data comes out. Edge Impulse distributes this data in various ways, and I distributed it as an Arduino library so that it can be used in Arduino.</p>
+                
+                <div class="flex-container flex-basis-half">
+                    <div class="flex-item">
+                        <img src="../assets/images/uni.png"/>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/code.png"/>
+                    </div>
+                </div>
+                
+                <p>After that, I made a Unity game that can be used in conjunction with the controller. Before the start of the game, the player interlocked with his virtual currency wallet, started the game, and measured the number of mouse clicks for 1 minute to create a format in which he could claim coins. You can play with a mouse by setting the value that comes out as a mouse click by the machine learning controller, but if you use a controller, fewer clicks will come out.</p>
+                
+                <!-- default flex item is for 4 & follows media query styling for home page -->
+                <!-- <div class="flex-container">
+                    <div class="flex-item">
+                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
+                    </div>
+                    <div class="flex-item">
+                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
+                    </div>
+                </div> -->
          
             </section>
             <section>
                 <h3>Reflection and Future Development</h3>
-                <p>Reflect on how the project went, what went well, what you learnt etc. Based on these reflections, conclude with how you would further develop this project if you were to make another version or how you would further develop your ideas.</p>
+                <p>The project was successful in creating a pickaxe-shaped controller that can be used to play a blockchain game in Unity. The project also provided insights into the impact of changes in industry on human physical labor and the concept of industry. </p>
+                <p>However, since this is the first time for everything, there were many regrettable parts. If you know how to handle machine learning data in more detail, you can create a more detailed controller. Also, Unity games were also difficult because it was the first time using C# script.</p>
+                <p>The plan is to hire a real miner, record his pickaxe motion, and machine-learn it so that the audience can get coins only by following his movements exactly. Unity games are also developed more and more, aiming to add interesting interactions.</p>
+                
+                <p style = "color: red;">*I DEACTIVATED CLAIM BUTTON IN GAME LINKED IN FINAL PROJECT LINK. AVOID FOR UNNECESSARY TRANSACTION*</p>
             </section>
             <section>
                 <h3>References</h3>
                 <ul>
-                    <li>Technical Reference example. Include link where possible.</li>
-                    <li>Conceptual Reference example. Include link where possible.</li>
+                    <li>Technical Reference <a href="https://docs.edgeimpulse.com/docs/development-platforms/officially-supported-mcu-targets/espressif-esp32">https://docs.edgeimpulse.com/docs/development-platforms/officially-supported-mcu-targets/espressif-esp32</a></li>
+                    <li>Technical Reference <a href="https://portal.thirdweb.com/unity/getting-started">https://portal.thirdweb.com/unity/getting-started</a></li>
+                    <li>Conceptual Reference Brynjolfsson, E., & McAfee, A. (2014). The second machine age: Work, progress, and prosperity in a time of brilliant technologies. WW Norton & Company. </li>
                 </ul>
             </section>
         </main>
